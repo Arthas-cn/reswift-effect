@@ -39,7 +39,7 @@ open class Store<State, Environment>: StoreType {
     public lazy var dispatchFunction: DispatchFunction! = createDispatchFunction()
     @ObservationIgnored
     private var reducer: Reducer<State, Environment>
-    private let environment: Environment
+    var environment: Environment
     
     // Track active tasks for lifecycle management
     // Using dictionary with UUID keys since Task doesn't conform to Hashable
