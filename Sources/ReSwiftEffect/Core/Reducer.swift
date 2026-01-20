@@ -7,4 +7,4 @@
 //
 
 public typealias Reducer<ReducerStateType, EnvironmentType> =
-    (_ state: inout ReducerStateType, _ action: Action, _ environment: EnvironmentType) -> Task<Action, Error>?
+    (_ state: inout ReducerStateType, _ action: Action, _ environment: inout EnvironmentType) -> Task<Action, Error>?

@@ -206,7 +206,7 @@ open class Store<State, Environment>: StoreType {
             fatalError("State must be initialized before calling reducer. Provide initial state in Store.init")
         }
         
-        let task = reducer(&mutableState, action, environment)
+        let task = reducer(&mutableState, action, &environment)
         
         // Reset isDispatching before updating state to allow subscribers to dispatch new actions
         isDispatching.value { $0 = false }
