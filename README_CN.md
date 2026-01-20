@@ -524,7 +524,9 @@ let package = Package(
         .watchOS(.v11)
     ],
     dependencies: [
-        .package(url: "https://github.com/Arthas-cn/reswift-effect", from: "1.0.0")
+        .package(url: "https://github.com/Arthas-cn/reswift-effect.git", from: "1.0.0")
+        // 或使用精确版本：
+        // .package(url: "https://github.com/Arthas-cn/reswift-effect.git", exact: "1.0.0")
     ],
     targets: [
         .target(
